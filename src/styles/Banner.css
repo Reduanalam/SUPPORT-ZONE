@@ -1,9 +1,4 @@
-/* ===================================================
-   BANNER  — two gradient stat cards with diagonal line pattern
-   LEFT card:  purple gradient  (In Progress)
-   RIGHT card: green  gradient  (Resolved)
-=================================================== */
-
+ 
 .banner {
   background: var(--bg-page);
   padding: 32px 40px;
@@ -17,7 +12,7 @@
   gap: 20px;
 }
 
-/* ── Base stat card ── */
+/*  stat card   */
 .stat-card {
   border-radius: 16px;
   padding: 32px 36px;
@@ -30,17 +25,17 @@
   justify-content: space-between;
 }
 
-/* ── Purple card (In Progress) ── */
+/*   Purple card   */
 .stat-card--purple {
   background: linear-gradient(135deg, #7c3aed 0%, #9333ea 50%, #a855f7 100%);
 }
 
-/* ── Green card (Resolved) ── */
+/*   Green card     */
 .stat-card--green {
   background: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #4ade80 100%);
 }
 
-/* ── Diagonal line pattern overlay (from vector1.png design) ── */
+ 
 .stat-card__pattern {
   position: absolute;
   inset: 0;
@@ -48,7 +43,7 @@
   overflow: hidden;
 }
 
-/* Radiating diagonal lines like in Figma */
+ 
 .stat-card__pattern::before {
   content: '';
   position: absolute;
@@ -68,7 +63,7 @@
   border-radius: 50%;
 }
 
-/* Additional radial lines from center */
+ 
 .stat-card__pattern::after {
   content: '';
   position: absolute;
@@ -86,7 +81,7 @@
     );
 }
 
-/* ── Card content ── */
+/*   Card content   */
 .stat-card__top {
   position: relative;
   z-index: 1;
@@ -112,7 +107,7 @@
   margin-top: 4px;
 }
 
-/* ── Card icon (bottom area) ── */
+/*   Card icon   */
 .stat-card__icon {
   position: relative;
   z-index: 1;
@@ -138,7 +133,7 @@
   stroke-linejoin: round;
 }
 
-/* ── Responsive ── */
+/*   Responsive  */
 @media (max-width: 768px) {
   .banner { padding: 20px 16px; }
   .banner-inner { grid-template-columns: 1fr; gap: 14px; }

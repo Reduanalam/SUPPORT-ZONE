@@ -1,8 +1,4 @@
-/* ===================================================
-   GLOBAL RESET & VARIABLES
-   Matching Figma: Customer Support — Ticket System
-=================================================== */
-
+ 
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +8,7 @@
 :root {
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Colors from Figma */
+  
   --bg-page:      #f3f4f6;
   --bg-white:     #ffffff;
   --bg-dark:      #111111;
@@ -30,7 +26,7 @@
   --border-color: #e5e7eb;
   --card-shadow:  0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
 
-  /* Priority badge colors */
+ 
   --prio-critical-bg:  #fef2f2;
   --prio-critical-txt: #dc2626;
   --prio-critical-dot: #dc2626;
@@ -47,7 +43,7 @@
   --prio-low-txt: #16a34a;
   --prio-low-dot: #22c55e;
 
-  /* Status badge colors */
+  /* Status   colors */
   --status-open-bg:  #f0fdf4;
   --status-open-txt: #16a34a;
   --status-open-dot: #22c55e;

@@ -52,7 +52,7 @@ function TicketCard({ ticket, onClick }) {
       tabIndex={0}
       onKeyDown={e => e.key === "Enter" && onClick(ticket)}
     >
-      {/* Header: title + status */}
+      {/* Header */}
       <div className="ticket-card__header">
         <h3 className="ticket-card__title">{ticket.title}</h3>
         <StatusBadge status={ticket.status} />
@@ -61,7 +61,7 @@ function TicketCard({ ticket, onClick }) {
       {/* Description */}
       <p className="ticket-card__desc">{ticket.description}</p>
 
-      {/* Footer: priority + customer + date */}
+      {/* Footer */}
       <div className="ticket-card__footer">
         <PriorityBadge priority={ticket.priority} />
         <div className="ticket-card__meta">

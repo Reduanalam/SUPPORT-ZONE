@@ -1,8 +1,4 @@
-/* ===================================================
-   FOOTER  — dark background, 4-column layout
-   Matches Figma: black bg, white text columns
-=================================================== */
-
+ 
 .footer {
   background: #111111;
   color: #ffffff;
@@ -110,7 +106,7 @@
   flex-shrink: 0;
 }
 
-/* Bottom bar */
+/* Bottom   */
 .footer__bottom {
   max-width: 1200px;
   margin: 24px auto 0;
@@ -141,7 +137,7 @@
   color: #9ca3af;
 }
 
-/* ── Responsive ── */
+/*   Responsive   */
 @media (max-width: 900px) {
   .footer { padding: 36px 24px 24px; }
   .footer__inner { grid-template-columns: 1fr 1fr; gap: 28px; }

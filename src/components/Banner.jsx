@@ -1,6 +1,6 @@
 import "../styles/Banner.css";
 
-// In-Progress icon (clock/hourglass)
+// In-Progress icon  
 function InProgressIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,7 +10,7 @@ function InProgressIcon() {
   );
 }
 
-// Resolved icon (diamond/checkmark)
+// Resolved icon  
 function ResolvedIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +25,7 @@ function Banner({ inProgressCount, resolvedCount }) {
     <section className="banner">
       <div className="banner-inner">
 
-        {/* LEFT: In Progress — purple */}
+        {/* LEFT: In Progress   */}
         <div className="stat-card stat-card--purple">
           <div className="stat-card__pattern" />
           <div className="stat-card__top">
@@ -37,7 +37,7 @@ function Banner({ inProgressCount, resolvedCount }) {
           </div>
         </div>
 
-        {/* RIGHT: Resolved — green */}
+        {/* RIGHT: Resolved   */}
         <div className="stat-card stat-card--green">
           <div className="stat-card__pattern" />
           <div className="stat-card__top">
