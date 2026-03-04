@@ -1,0 +1,147 @@
+/* ===================================================
+   BANNER  — two gradient stat cards with diagonal line pattern
+   LEFT card:  purple gradient  (In Progress)
+   RIGHT card: green  gradient  (Resolved)
+=================================================== */
+
+.banner {
+  background: var(--bg-page);
+  padding: 32px 40px;
+}
+
+.banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ── Base stat card ── */
+.stat-card {
+  border-radius: 16px;
+  padding: 32px 36px;
+  position: relative;
+  overflow: hidden;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* ── Purple card (In Progress) ── */
+.stat-card--purple {
+  background: linear-gradient(135deg, #7c3aed 0%, #9333ea 50%, #a855f7 100%);
+}
+
+/* ── Green card (Resolved) ── */
+.stat-card--green {
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #4ade80 100%);
+}
+
+/* ── Diagonal line pattern overlay (from vector1.png design) ── */
+.stat-card__pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Radiating diagonal lines like in Figma */
+.stat-card__pattern::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255,255,255,0.08) 0px,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px,
+      transparent 22px
+    );
+  border-radius: 50%;
+}
+
+/* Additional radial lines from center */
+.stat-card__pattern::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  background-image:
+    repeating-conic-gradient(
+      rgba(255,255,255,0.06) 0deg,
+      rgba(255,255,255,0.06) 1deg,
+      transparent 1deg,
+      transparent 10deg
+    );
+}
+
+/* ── Card content ── */
+.stat-card__top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+}
+
+.stat-card__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.02em;
+}
+
+.stat-card__count {
+  font-size: 52px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+/* ── Card icon (bottom area) ── */
+.stat-card__icon {
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  align-self: center;
+}
+
+.stat-card__icon svg {
+  width: 26px;
+  height: 26px;
+  color: #ffffff;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .banner { padding: 20px 16px; }
+  .banner-inner { grid-template-columns: 1fr; gap: 14px; }
+  .stat-card { min-height: 130px; padding: 24px 24px; }
+  .stat-card__count { font-size: 40px; }
+}

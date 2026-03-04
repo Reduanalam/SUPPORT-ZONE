@@ -1,0 +1,68 @@
+/* ===================================================
+   GLOBAL RESET & VARIABLES
+   Matching Figma: Customer Support — Ticket System
+=================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Colors from Figma */
+  --bg-page:      #f3f4f6;
+  --bg-white:     #ffffff;
+  --bg-dark:      #111111;
+
+  --purple-from:  #7c3aed;
+  --purple-to:    #9333ea;
+  --green-from:   #16a34a;
+  --green-mid:    #22c55e;
+  --green-to:     #4ade80;
+
+  --text-primary:   #111827;
+  --text-secondary: #6b7280;
+  --text-white:     #ffffff;
+
+  --border-color: #e5e7eb;
+  --card-shadow:  0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+
+  /* Priority badge colors */
+  --prio-critical-bg:  #fef2f2;
+  --prio-critical-txt: #dc2626;
+  --prio-critical-dot: #dc2626;
+
+  --prio-high-bg:  #fef2f2;
+  --prio-high-txt: #dc2626;
+  --prio-high-dot: #dc2626;
+
+  --prio-medium-bg:  #fffbeb;
+  --prio-medium-txt: #d97706;
+  --prio-medium-dot: #f59e0b;
+
+  --prio-low-bg:  #f0fdf4;
+  --prio-low-txt: #16a34a;
+  --prio-low-dot: #22c55e;
+
+  /* Status badge colors */
+  --status-open-bg:  #f0fdf4;
+  --status-open-txt: #16a34a;
+  --status-open-dot: #22c55e;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg-page);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+button { font-family: var(--font); cursor: pointer; }
+a { text-decoration: none; }
+ul { list-style: none; }

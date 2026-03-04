@@ -1,0 +1,32 @@
+/* ===================================================
+   APP LAYOUT
+=================================================== */
+
+.main-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 40px 48px;
+}
+
+.main-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Toastify overrides to match design */
+.Toastify__toast {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .main-layout { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+  .main-section { padding: 16px 16px 40px; }
+}

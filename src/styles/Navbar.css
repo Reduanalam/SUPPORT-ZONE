@@ -1,0 +1,94 @@
+/* ===================================================
+   NAVBAR  — white bg, logo left, links + button right
+=================================================== */
+
+.navbar {
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.navbar-logo svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Push links to the right */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.navbar-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.navbar-links a:hover {
+  background: #f3f4f6;
+  color: var(--text-primary);
+}
+
+/* New Ticket button — purple from Figma */
+.btn-new-ticket {
+  background: #7c3aed;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 8px;
+  transition: background 0.15s, transform 0.1s;
+  white-space: nowrap;
+}
+
+.btn-new-ticket:hover {
+  background: #6d28d9;
+  transform: translateY(-1px);
+}
+
+/* Mobile hamburger */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: var(--text-primary);
+  padding: 4px;
+  margin-left: auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .navbar { padding: 0 16px; }
+  .navbar-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: white; border-bottom: 1px solid var(--border-color); padding: 12px 16px; gap: 4px; box-shadow: 0 4px 12px rgba(0,0,0,.1); }
+  .navbar-links.open { display: flex; }
+  .navbar-links a { padding: 10px 12px; border-radius: 8px; }
+  .btn-new-ticket { display: none; }
+  .navbar-toggle { display: block; }
+}
