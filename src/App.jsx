@@ -12,22 +12,21 @@ import INITIAL_TICKETS from "./data/tickets";
 import "./styles/App.css";
 
 function App() {
-  // All open tickets
+  
   const [tickets, setTickets] = useState(INITIAL_TICKETS);
-  // Tickets currently in progress (added to task panel)
+  
   const [inProgress, setInProgress] = useState([]);
-  // Resolved tickets
+  
   const [resolved, setResolved] = useState([]);
 
-  // New Ticket button click
+  
   const handleNewTicket = () => {
     toast.info("New ticket form coming soon! 📝", {
       position: "top-right",
       autoClose: 2500,
     });
   };
-
-  // Clicking a ticket card → add to In Progress
+ 
   const handleCardClick = useCallback(
     (ticket) => {
       if (inProgress.find((t) => t.id === ticket.id)) {
@@ -46,15 +45,15 @@ function App() {
     [inProgress]
   );
 
-  // Complete button → resolve ticket
+  
   const handleComplete = useCallback((ticket) => {
-    // 1. Remove from In Progress
+     
     setInProgress((prev) => prev.filter((t) => t.id !== ticket.id));
-    // 2. Add to Resolved
+    
     setResolved((prev) => [ticket, ...prev]);
-    // 3. Remove from open tickets list
+    
     setTickets((prev) => prev.filter((t) => t.id !== ticket.id));
-    // 4. Toast notification
+    
     toast.success(`"${ticket.title}" has been resolved! ✅`, {
       position: "top-right",
       autoClose: 3000,
@@ -64,21 +63,20 @@ function App() {
   return (
     <>
       <ToastContainer theme="light" />
-
-      {/* Navbar */}
+ 
       <Navbar onNewTicket={handleNewTicket} />
 
-      {/* Banner: two stat cards */}
+     
       <Banner
         inProgressCount={inProgress.length}
         resolvedCount={resolved.length}
       />
 
-      {/* Main */}
+      
       <main className="main-section">
         <div className="main-layout">
 
-          {/* LEFT: Ticket grid */}
+          
           <section className="tickets-section">
             <div className="section-heading">
               <h2>Support Tickets ({tickets.length})</h2>
@@ -109,7 +107,7 @@ function App() {
             )}
           </section>
 
-          {/* RIGHT: Task status panel */}
+         
           <TaskStatusPanel
             inProgress={inProgress}
             resolved={resolved}
