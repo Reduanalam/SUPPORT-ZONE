@@ -1,24 +1,24 @@
 import "../styles/Banner.css";
 
 // In-Progress icon  
-// function InProgressIcon() {
-//   return (
-//     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-//       <circle cx="12" cy="12" r="9" stroke="white" strokeWidth="2"/>
-//       <path d="M12 7v5l3 3" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-//     </svg>
-//   );
-// }
+function InProgressIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="9" stroke="white" strokeWidth="2"/>
+      <path d="M12 7v5l3 3" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
 
-// // Resolved icon  
-// function ResolvedIcon() {
-//   return (
-//     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-//       <path d="M12 2L22 12L12 22L2 12L12 2Z" stroke="white" strokeWidth="2" strokeLinejoin="round"/>
-//       <path d="M8 12l3 3 5-5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-//     </svg>
-//   );
-// }
+// Resolved icon  
+function ResolvedIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2L22 12L12 22L2 12L12 2Z" stroke="white" strokeWidth="2" strokeLinejoin="round"/>
+      <path d="M8 12l3 3 5-5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
 
 function Banner({ inProgressCount, resolvedCount }) {
   return (
